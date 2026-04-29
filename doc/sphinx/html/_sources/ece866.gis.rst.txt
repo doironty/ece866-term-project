@@ -1,0 +1,21 @@
+ece866.gis package
+==================
+
+Submodules
+----------
+
+ece866.gis.geometry module
+--------------------------
+
+.. automodule:: ece866.gis.geometry
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Module contents
+---------------
+
+.. automodule:: ece866.gis
+   :members:
+   :show-inheritance:
+   :undoc-members:

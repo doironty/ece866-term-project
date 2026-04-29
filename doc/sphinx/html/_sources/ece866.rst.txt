@@ -1,0 +1,20 @@
+ece866 package
+==============
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   ece866.gis
+   ece866.time_frequency
+   ece866.util
+
+Module contents
+---------------
+
+.. automodule:: ece866
+   :members:
+   :show-inheritance:
+   :undoc-members:

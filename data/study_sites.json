@@ -1,0 +1,29 @@
+{
+  "count": 3,
+  "sites": [
+    {
+      "region": "southern",
+      "lc_type": {
+        "name": "Croplands",
+        "value": 12
+      },
+      "coordinate": [42.23405, -84.84961]
+    },
+    {
+      "region": "central",
+      "lc_type": {
+        "name": "Mixed Forests",
+        "value": 5
+      },
+      "coordinate": [44.59190, -84.42740]
+    },
+    {
+      "region": "northern",
+      "lc_type": {
+        "name": "Evergreen Needleleaf Forests",
+        "value": 1
+      },
+      "coordinate": [46.30960, -86.59370]
+    }
+  ]
+}

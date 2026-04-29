@@ -1,0 +1,37 @@
+ece866.util package
+===================
+
+Submodules
+----------
+
+ece866.util.cli module
+----------------------
+
+.. automodule:: ece866.util.cli
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+ece866.util.logger module
+-------------------------
+
+.. automodule:: ece866.util.logger
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+ece866.util.math\_utils module
+------------------------------
+
+.. automodule:: ece866.util.math_utils
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Module contents
+---------------
+
+.. automodule:: ece866.util
+   :members:
+   :show-inheritance:
+   :undoc-members:

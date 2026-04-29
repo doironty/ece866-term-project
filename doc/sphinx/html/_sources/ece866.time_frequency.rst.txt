@@ -1,0 +1,10 @@
+ece866.time\_frequency package
+==============================
+
+Module contents
+---------------
+
+.. automodule:: ece866.time_frequency
+   :members:
+   :show-inheritance:
+   :undoc-members:

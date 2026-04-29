@@ -1,0 +1,82 @@
+[project]
+name = "ece866"
+version = "0.0.1"
+description = "A package for implementing my MSU ECE 866 term project."
+authors = [{ name = "Tyler Doiron", email = "doironty@msu.edu" }]
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Michigan State University" }
+dependencies = [
+    "Cartopy==0.25.0",
+    "chardet>=3.0.2,<6.0.0",
+    "charset-normalizer>=2,<4",
+    "contextily==1.7.0",
+    "geopandas==1.1.3",
+    "matlabengine==25.2.2",
+    "matplotlib==3.10.8",
+    "numpy==2.4.3",
+    "pandas==2.3.3",
+    "planetary-computer==1.0.0",
+    "plotly==6.6.0",
+    "pydantic==2.12.5",
+    "python-dotenv==1.2.2",
+    "PyYAML==6.0.3",
+    "PyWavelets==1.9.0",
+    "requests==2.32.5",
+    "rioxarray==0.22.0",
+    "scikit-learn==1.8.0",
+    "scipy==1.17.1",
+    "shapely==2.1.2",
+    "stackstac==0.5.1",
+    "urllib3>=2.6.3"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.0.2",
+    "pytest-cov==7.0.0",
+    "coverage==7.13.4",
+    "pylint",
+    "diff_cover"
+]
+docs = [
+    "sphinx==9.1.0",
+    "canonical-sphinx"
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests"
+]
+filterwarnings = "ignore::DeprecationWarning"
+addopts = "-vv -rfxws --cov=src/ece866 --cov-branch --cov-report=term --cov-report=html"
+
+[tool.coverage.run]
+branch = true
+source = ["src/ece866"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+fail_under = 80
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+]
+
+[tool.coverage.html]
+directory = "reports"
+
+[project.scripts]
+doc = "ece866.util.cli:doc_entry"
+fetch = "ece866.util.cli:fetch_entry"

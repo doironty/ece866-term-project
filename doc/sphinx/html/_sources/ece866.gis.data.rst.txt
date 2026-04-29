@@ -1,0 +1,15 @@
+ece866.gis.data namespace
+=========================
+
+.. py:module:: ece866.gis.data
+
+Submodules
+----------
+
+ece866.gis.data.mpc module
+--------------------------
+
+.. automodule:: ece866.gis.data.mpc
+   :members:
+   :show-inheritance:
+   :undoc-members:
