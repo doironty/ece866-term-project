@@ -9,4 +9,6 @@ ECE 866 Term Project Documentation
 .. toctree::
    :maxdepth: 10
 
-   ece866
+   gis
+   util
+   time_frequency

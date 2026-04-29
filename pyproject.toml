@@ -78,5 +78,5 @@ exclude_lines = [
 directory = "reports"
 
 [project.scripts]
-doc = "ece866.util.cli:doc_entry"
-fetch = "ece866.util.cli:fetch_entry"
+doc = "util.cli:doc_entry"
+fetch = "util.cli:fetch_entry"

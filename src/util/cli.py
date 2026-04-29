@@ -38,7 +38,7 @@ def doc_entry():
     sphinx_root = os.path.join(_PROJECT_ROOT, "sphinx")
     src_root = os.path.join(_PROJECT_ROOT, "src")
 
-    cmd_line = ["sphinx-apidoc", "-f", "--no-toc", "-o", os.path.join(sphinx_root, "source"), os.path.join(src_root, "ece866")]
+    cmd_line = ["sphinx-apidoc", "-f", "--no-toc", "-o", os.path.join(sphinx_root, "source"), os.path.join(src_root)]
     process = subprocess.Popen(cmd_line, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, bufsize=1)
     for line in process.stdout:
         print(line, end='')
