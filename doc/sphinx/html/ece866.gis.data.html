@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="ece866.time_frequency package" href="ece866.time_frequency.html"><link rel="prev" title="ece866.gis package" href="ece866.gis.html">
 
     <link rel="shortcut icon" href="_static/favicon.png"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>ece866.gis.data package - ECE 866 Term Project 0.0.5 documentation</title>
+        <title>ece866.gis.data package - ECE 866 Term Project 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -188,7 +188,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">ECE 866 Term Project 0.0.5 documentation</div></a>
+      <a href="index.html"><div class="brand">ECE 866 Term Project 0.0.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -209,7 +209,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
-  <span class="sidebar-brand-text">ECE 866 Term Project 0.0.5 documentation</span>
+  <span class="sidebar-brand-text">ECE 866 Term Project 0.0.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
     <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -263,45 +263,8 @@
         <article role="main" id="furo-main-content">
           <section id="ece866-gis-data-package">
 <h1>ece866.gis.data package<a class="headerlink" href="#ece866-gis-data-package" title="Link to this heading">¶</a></h1>
-<section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
-</section>
-<section id="module-ece866.gis.data.mpc">
-<span id="ece866-gis-data-mpc-module"></span><h2>ece866.gis.data.mpc module<a class="headerlink" href="#module-ece866.gis.data.mpc" title="Link to this heading">¶</a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="ece866.gis.data.mpc.download_modis_13a1_061">
-<span class="sig-prename descclassname"><span class="pre">ece866.gis.data.mpc.</span></span><span class="sig-name descname"><span class="pre">download_modis_13a1_061</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geom_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">GeoDataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_year</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_year</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cache</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ece866.gis.data.mpc.download_modis_13a1_061" title="Link to this definition">¶</a></dt>
-<dd><p>Download MODIS 13A1 (NDVI/EVI) and paired 09A1 (surface reflectance preview)
-products from the Microsoft Planetary Computer for a given geometry and date range.</p>
-<p>For each MODIS 13A1 item found, a clipped GeoTIFF is saved. A matching 09A1
-rendered preview PNG is also saved when a corresponding item is available.</p>
-<section id="parameters">
-<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>geom_file<span class="classifier">str or gpd.GeoDataFrame</span></dt><dd><p>Path to a vector file or an existing GeoDataFrame defining the area of interest.</p>
-</dd>
-<dt>start_year<span class="classifier">int</span></dt><dd><p>Start year of the download range (inclusive).</p>
-</dd>
-<dt>end_year<span class="classifier">int</span></dt><dd><p>End year of the download range (inclusive).</p>
-</dd>
-<dt>out_folder<span class="classifier">str, optional</span></dt><dd><p>Root directory for output files. Defaults to the current working directory.</p>
-</dd>
-<dt>use_cache<span class="classifier">bool, optional</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, skips downloading files that already exist on disk. Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
-</dd>
-</dl>
-</section>
-<section id="notes">
-<h3>Notes<a class="headerlink" href="#notes" title="Link to this heading">¶</a></h3>
-<p>Output files are written to <code class="docutils literal notranslate"><span class="pre">&lt;out_folder&gt;/modis-13A1-061/&lt;item_id&gt;.tif</span></code> and
-<code class="docutils literal notranslate"><span class="pre">&lt;out_folder&gt;/modis-13A1-061/&lt;item_id&gt;.png</span></code>.</p>
-<p>Both Terra (MOD) and Aqua (MYD) satellites are supported. The 09A1 preview
-is matched to each 13A1 item by satellite, date, and tile.</p>
-</section>
-</dd></dl>
-
-</section>
-<section id="module-ece866.gis.data">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ece866.gis.data" title="Link to this heading">¶</a></h2>
+<section id="ece866-gis-data-mpc-module">
+<h2>ece866.gis.data.mpc module<a class="headerlink" href="#ece866-gis-data-mpc-module" title="Link to this heading">¶</a></h2>
 </section>
 </section>
 
@@ -322,7 +285,7 @@ is matched to each 13A1 item by satellite, date, and tile.</p>
     <div class="copyright">
         &copy; 2026, Tyler Doiron 
     </div><div class="last-updated">
-      Last updated on Mar 16, 2026</div>
+      Last updated on Apr 29, 2026</div>
   </div>
   <div>
    
@@ -346,12 +309,7 @@ is matched to each 13A1 item by satellite, date, and tile.</p>
       <div class="toc-tree">
         <ul>
 <li><a class="reference internal" href="#">ece866.gis.data package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-ece866.gis.data.mpc">ece866.gis.data.mpc module</a><ul>
-<li><a class="reference internal" href="#ece866.gis.data.mpc.download_modis_13a1_061"><code class="docutils literal notranslate"><span class="pre">download_modis_13a1_061()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-ece866.gis.data">Module contents</a></li>
+<li><a class="reference internal" href="#ece866-gis-data-mpc-module">ece866.gis.data.mpc module</a></li>
 </ul>
 </li>
 </ul>
@@ -364,7 +322,7 @@ is matched to each 13A1 item by satellite, date, and tile.</p>
 
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=12ed36b8"></script>
+</div><script src="_static/documentation_options.js?v=5aa371e9"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>

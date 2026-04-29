@@ -2,10 +2,12 @@
 <html class="no-js" lang="en" data-content_root="./">
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="util package" href="util.html"><link rel="prev" title="gis package" href="gis.html">
 
-    <link rel="shortcut icon" href="_static/favicon.png"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 --><title>Python Module Index - ECE 866 Term Project 0.0.1 documentation</title>
-<link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
+    <link rel="shortcut icon" href="_static/favicon.png"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
+        <title>gis.data package - ECE 866 Term Project 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=09c36f8d" />
@@ -197,7 +199,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -216,9 +218,9 @@
     <input type="hidden" name="area" value="default">
   </form>
   <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="gis.html">gis package</a><input aria-label="Toggle navigation of gis package" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="gis.data.html">gis.data package</a></li>
+  <ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="gis.html">gis package</a><input aria-label="Toggle navigation of gis package" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">gis.data package</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="util.html">util package</a></li>
@@ -242,7 +244,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
               <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
               <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
@@ -250,110 +253,93 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          
-<section class="domainindex-section">
-  <h1>Python Module Index</h1>
-  <div class="domainindex-jumpbox"><a href="#cap-g"><strong>g</strong></a> | <a href="#cap-t"><strong>t</strong></a> | <a href="#cap-u"><strong>u</strong></a></div>
+          <section id="gis-data-package">
+<h1>gis.data package<a class="headerlink" href="#gis-data-package" title="Link to this heading">¶</a></h1>
+<section id="module-gis.data.conditioning">
+<span id="gis-data-conditioning-module"></span><h2>gis.data.conditioning module<a class="headerlink" href="#module-gis.data.conditioning" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="gis.data.conditioning.condition_data">
+<span class="sig-prename descclassname"><span class="pre">gis.data.conditioning.</span></span><span class="sig-name descname"><span class="pre">condition_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid_spacing_days</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gis.data.conditioning.condition_data" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gis.data.conditioning.mask_quality">
+<span class="sig-prename descclassname"><span class="pre">gis.data.conditioning.</span></span><span class="sig-name descname"><span class="pre">mask_quality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">da</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataArray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataArray</span></span></span><a class="headerlink" href="#gis.data.conditioning.mask_quality" title="Link to this definition">¶</a></dt>
+<dd><p>Mask pixels with clouds, shadows, or snow using the VI Quality band.
+Uses MODIS MOD13A1 VI Quality bit flags (16-bit unsigned integer).</p>
+<p>Bit 0-1: VI usefulness (00 = good, 01 = marginal, 10 = snow/ice, 11 = cloudy)
+Bit 2:   Shadow (1 = shadow)
+Bit 15:  Possible snow/ice (1 = snow/ice)</p>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>da<span class="classifier">xr.DataArray</span></dt><dd><p>Full data array with band dimension including “500m_16_days_VI_Quality”</p>
+</dd>
+</dl>
 </section>
-<table class="domainindex-table">
-  <tr class="pcap">
-    <td></td><td>&#160;</td><td></td>
-  </tr>
-  <tr class="cap" id="cap-g">
-    <td></td><td><strong>g</strong></td><td></td>
-  </tr>
-  <tr>
-    <td><img src="_static/minus.png" class="toggler"
-              id="toggle-1" style="display: none" alt="-" /></td>
-    <td>
-        <a href="gis.html#module-gis"><code class="xref">gis</code></a></td><td>
-    <em></em></td>
-  </tr>
-  <tr class="cg-1">
-    <td></td>
-    <td>&#160;&#160;&#160;
-        <a href="gis.data.html#module-gis.data"><code class="xref">gis.data</code></a></td><td>
-    <em></em></td>
-  </tr>
-  <tr class="cg-1">
-    <td></td>
-    <td>&#160;&#160;&#160;
-        <a href="gis.data.html#module-gis.data.conditioning"><code class="xref">gis.data.conditioning</code></a></td><td>
-    <em></em></td>
-  </tr>
-  <tr class="cg-1">
-    <td></td>
-    <td>&#160;&#160;&#160;
-        <a href="gis.data.html#module-gis.data.io"><code class="xref">gis.data.io</code></a></td><td>
-    <em></em></td>
-  </tr>
-  <tr class="cg-1">
-    <td></td>
-    <td>&#160;&#160;&#160;
-        <a href="gis.data.html#module-gis.data.mpc"><code class="xref">gis.data.mpc</code></a></td><td>
-    <em></em></td>
-  </tr>
-  <tr class="cg-1">
-    <td></td>
-    <td>&#160;&#160;&#160;
-        <a href="gis.html#module-gis.geometry"><code class="xref">gis.geometry</code></a></td><td>
-    <em></em></td>
-  </tr>
-  <tr class="pcap">
-    <td></td><td>&#160;</td><td></td>
-  </tr>
-  <tr class="cap" id="cap-t">
-    <td></td><td><strong>t</strong></td><td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>
-        <a href="time_frequency.html#module-time_frequency"><code class="xref">time_frequency</code></a></td><td>
-    <em></em></td>
-  </tr>
-  <tr class="pcap">
-    <td></td><td>&#160;</td><td></td>
-  </tr>
-  <tr class="cap" id="cap-u">
-    <td></td><td><strong>u</strong></td><td></td>
-  </tr>
-  <tr>
-    <td><img src="_static/minus.png" class="toggler"
-              id="toggle-2" style="display: none" alt="-" /></td>
-    <td>
-        <a href="util.html#module-util"><code class="xref">util</code></a></td><td>
-    <em></em></td>
-  </tr>
-  <tr class="cg-2">
-    <td></td>
-    <td>&#160;&#160;&#160;
-        <a href="util.html#module-util.cli"><code class="xref">util.cli</code></a></td><td>
-    <em></em></td>
-  </tr>
-  <tr class="cg-2">
-    <td></td>
-    <td>&#160;&#160;&#160;
-        <a href="util.html#module-util.dates"><code class="xref">util.dates</code></a></td><td>
-    <em></em></td>
-  </tr>
-  <tr class="cg-2">
-    <td></td>
-    <td>&#160;&#160;&#160;
-        <a href="util.html#module-util.logger"><code class="xref">util.logger</code></a></td><td>
-    <em></em></td>
-  </tr>
-  <tr class="cg-2">
-    <td></td>
-    <td>&#160;&#160;&#160;
-        <a href="util.html#module-util.math_utils"><code class="xref">util.math_utils</code></a></td><td>
-    <em></em></td>
-  </tr>
-</table>
+<section id="returns">
+<h3>Returns<a class="headerlink" href="#returns" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>xr.DataArray</dt><dd><p>Data array with clouds, shadows, and snow masked to NaN</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gis.data.conditioning.snap_to_uniform_grid">
+<span class="sig-prename descclassname"><span class="pre">gis.data.conditioning.</span></span><span class="sig-name descname"><span class="pre">snap_to_uniform_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">da</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_days</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance_days</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gis.data.conditioning.snap_to_uniform_grid" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-gis.data.io">
+<span id="gis-data-io-module"></span><h2>gis.data.io module<a class="headerlink" href="#module-gis.data.io" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="gis.data.io.load_collection">
+<span class="sig-prename descclassname"><span class="pre">gis.data.io.</span></span><span class="sig-name descname"><span class="pre">load_collection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4326</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_pixels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataArray</span></span></span><a class="headerlink" href="#gis.data.io.load_collection" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-gis.data.mpc">
+<span id="gis-data-mpc-module"></span><h2>gis.data.mpc module<a class="headerlink" href="#module-gis.data.mpc" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="gis.data.mpc.download_modis_13a1_061">
+<span class="sig-prename descclassname"><span class="pre">gis.data.mpc.</span></span><span class="sig-name descname"><span class="pre">download_modis_13a1_061</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geom_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">GeoDataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_year</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_year</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cache</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gis.data.mpc.download_modis_13a1_061" title="Link to this definition">¶</a></dt>
+<dd><p>Download MODIS 13A1 (NDVI/EVI) and paired 09A1 (surface reflectance preview)
+products from the Microsoft Planetary Computer for a given geometry and date range.</p>
+<p>For each MODIS 13A1 item found, a clipped GeoTIFF is saved. A matching 09A1
+rendered preview PNG is also saved when a corresponding item is available.</p>
+<section id="id1">
+<h3>Parameters<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>geom_file<span class="classifier">str or gpd.GeoDataFrame</span></dt><dd><p>Path to a vector file or an existing GeoDataFrame defining the area of interest.</p>
+</dd>
+<dt>start_year<span class="classifier">int</span></dt><dd><p>Start year of the download range (inclusive).</p>
+</dd>
+<dt>end_year<span class="classifier">int</span></dt><dd><p>End year of the download range (inclusive).</p>
+</dd>
+<dt>out_folder<span class="classifier">str, optional</span></dt><dd><p>Root directory for output files. Defaults to the current working directory.</p>
+</dd>
+<dt>use_cache<span class="classifier">bool, optional</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, skips downloading files that already exist on disk. Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</dd>
+</dl>
+</section>
+<section id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Link to this heading">¶</a></h3>
+<p>Output files are written to <code class="docutils literal notranslate"><span class="pre">&lt;out_folder&gt;/modis-13A1-061/&lt;item_id&gt;.tif</span></code> and
+<code class="docutils literal notranslate"><span class="pre">&lt;out_folder&gt;/modis-13A1-061/&lt;item_id&gt;.png</span></code>.</p>
+<p>Both Terra (MOD) and Aqua (MYD) satellites are supported. The 09A1 preview
+is matched to each 13A1 item by satellite, date, and tile.</p>
+</section>
+</dd></dl>
+
+<span class="target" id="module-gis.data"></span></section>
+</section>
 
         </article>
       </div>
@@ -383,7 +369,7 @@
 
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
 <div class="toc-sticky toc-scroll">
    
@@ -394,7 +380,26 @@
     </div>
     <div class="toc-tree-container">
       <div class="toc-tree">
-        
+        <ul>
+<li><a class="reference internal" href="#">gis.data package</a><ul>
+<li><a class="reference internal" href="#module-gis.data.conditioning">gis.data.conditioning module</a><ul>
+<li><a class="reference internal" href="#gis.data.conditioning.condition_data"><code class="docutils literal notranslate"><span class="pre">condition_data()</span></code></a></li>
+<li><a class="reference internal" href="#gis.data.conditioning.mask_quality"><code class="docutils literal notranslate"><span class="pre">mask_quality()</span></code></a></li>
+<li><a class="reference internal" href="#gis.data.conditioning.snap_to_uniform_grid"><code class="docutils literal notranslate"><span class="pre">snap_to_uniform_grid()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-gis.data.io">gis.data.io module</a><ul>
+<li><a class="reference internal" href="#gis.data.io.load_collection"><code class="docutils literal notranslate"><span class="pre">load_collection()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-gis.data.mpc">gis.data.mpc module</a><ul>
+<li><a class="reference internal" href="#gis.data.mpc.download_modis_13a1_061"><code class="docutils literal notranslate"><span class="pre">download_modis_13a1_061()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
       </div>
     </div>
    

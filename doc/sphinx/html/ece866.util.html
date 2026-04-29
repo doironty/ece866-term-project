@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="prev" title="ece866.time_frequency package" href="ece866.time_frequency.html">
 
     <link rel="shortcut icon" href="_static/favicon.png"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>ece866.util package - ECE 866 Term Project 0.0.5 documentation</title>
+        <title>ece866.util package - ECE 866 Term Project 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -188,7 +188,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">ECE 866 Term Project 0.0.5 documentation</div></a>
+      <a href="index.html"><div class="brand">ECE 866 Term Project 0.0.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -209,7 +209,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
-  <span class="sidebar-brand-text">ECE 866 Term Project 0.0.5 documentation</span>
+  <span class="sidebar-brand-text">ECE 866 Term Project 0.0.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
     <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -263,336 +263,14 @@
         <article role="main" id="furo-main-content">
           <section id="ece866-util-package">
 <h1>ece866.util package<a class="headerlink" href="#ece866-util-package" title="Link to this heading">¶</a></h1>
-<section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+<section id="ece866-util-cli-module">
+<h2>ece866.util.cli module<a class="headerlink" href="#ece866-util-cli-module" title="Link to this heading">¶</a></h2>
 </section>
-<section id="module-ece866.util.cli">
-<span id="ece866-util-cli-module"></span><h2>ece866.util.cli module<a class="headerlink" href="#module-ece866.util.cli" title="Link to this heading">¶</a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="ece866.util.cli.doc_entry">
-<span class="sig-prename descclassname"><span class="pre">ece866.util.cli.</span></span><span class="sig-name descname"><span class="pre">doc_entry</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ece866.util.cli.doc_entry" title="Link to this definition">¶</a></dt>
-<dd><p>Build the Sphinx HTML documentation and open it in the default web browser.</p>
-<p>Runs <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> in the project’s <code class="docutils literal notranslate"><span class="pre">sphinx/</span></code> directory. If the build
-succeeds, the generated <code class="docutils literal notranslate"><span class="pre">index.html</span></code> is opened in a new browser tab.
-If the build fails, the non-zero return code and stderr output are printed
-to the console.</p>
-<section id="notes">
-<h3>Notes<a class="headerlink" href="#notes" title="Link to this heading">¶</a></h3>
-<p>Registered as a <code class="docutils literal notranslate"><span class="pre">[project.scripts]</span></code> entry point in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>
-under the name <code class="docutils literal notranslate"><span class="pre">doc</span></code>.</p>
-<p>Assumes the Sphinx source is located at <code class="docutils literal notranslate"><span class="pre">&lt;project_root&gt;/sphinx/</span></code> and
-the built HTML output is at <code class="docutils literal notranslate"><span class="pre">&lt;project_root&gt;/doc/sphinx/html/</span></code>.</p>
+<section id="ece866-util-logger-module">
+<h2>ece866.util.logger module<a class="headerlink" href="#ece866-util-logger-module" title="Link to this heading">¶</a></h2>
 </section>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ece866.util.cli.fetch_entry">
-<span class="sig-prename descclassname"><span class="pre">ece866.util.cli.</span></span><span class="sig-name descname"><span class="pre">fetch_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">argv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['/Users/tdoiron/.pyenv/versions/ece866-3.12/bin/sphinx-build',</span> <span class="pre">'-M',</span> <span class="pre">'html',</span> <span class="pre">'source',</span> <span class="pre">'build']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ece866.util.cli.fetch_entry" title="Link to this definition">¶</a></dt>
-<dd><p>CLI entry point for downloading remote sensing data products.</p>
-<p>Parses command-line arguments and dispatches to the appropriate download
-function based on the specified product. A timestamped log file is written
-to the output folder.</p>
-<section id="parameters">
-<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>argv<span class="classifier">list of str, optional</span></dt><dd><p>Argument vector to parse. Defaults to <code class="docutils literal notranslate"><span class="pre">sys.argv</span></code>. Override for
-programmatic or testing use.</p>
-</dd>
-</dl>
-</section>
-<section id="raises">
-<h3>Raises<a class="headerlink" href="#raises" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>ArgumentTypeError</dt><dd><p>If required arguments are missing or cannot be parsed.</p>
-</dd>
-<dt>ValueError</dt><dd><p>If the specified product is not recognized.</p>
-</dd>
-</dl>
-</section>
-<section id="id1">
-<h3>Notes<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
-<p>Registered as a <code class="docutils literal notranslate"><span class="pre">[project.scripts]</span></code> entry point in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>
-under the name <code class="docutils literal notranslate"><span class="pre">fetch</span></code>.</p>
-<p>Currently supported products:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">modis-13a1-061</span></code> — MODIS Terra/Aqua Vegetation Indices (500m, 8-day)</p></li>
-</ul>
-</section>
-<section id="examples">
-<h3>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fetch<span class="w"> </span>-p<span class="w"> </span>modis-13a1-061<span class="w"> </span>-g<span class="w"> </span>region.geojson<span class="w"> </span>-ys<span class="w"> </span><span class="m">2020</span><span class="w"> </span>-ye<span class="w"> </span><span class="m">2023</span><span class="w"> </span>-o<span class="w"> </span>./data<span class="w"> </span>--use-cache
-</pre></div>
-</div>
-</section>
-</dd></dl>
-
-</section>
-<section id="module-ece866.util.logger">
-<span id="ece866-util-logger-module"></span><h2>ece866.util.logger module<a class="headerlink" href="#module-ece866.util.logger" title="Link to this heading">¶</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="ece866.util.logger.Logger">
-<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">ece866.util.logger.</span></span><span class="sig-name descname"><span class="pre">Logger</span></span><a class="headerlink" href="#ece866.util.logger.Logger" title="Link to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Package-level logger factory for the <code class="docutils literal notranslate"><span class="pre">ece866</span></code> package.</p>
-<p>Provides static methods to initialize and retrieve named loggers with
-consistent formatting, file output, console output, and warning capture.</p>
-<section id="attributes">
-<h3>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>created<span class="classifier">str</span></dt><dd><p>Timestamp of logger creation, formatted as <code class="docutils literal notranslate"><span class="pre">'YYYY-MM-DD-HH-MM-SS'</span></code>.</p>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="ece866.util.logger.Logger.get">
-<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Logger</span></span></span><a class="headerlink" href="#ece866.util.logger.Logger.get" title="Link to this definition">¶</a></dt>
-<dd><p>Retrieve a logger by name.</p>
-<section id="id2">
-<h4>Parameters<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h4>
-<dl class="simple">
-<dt>logger_name<span class="classifier">str, optional</span></dt><dd><p>Name of the logger to retrieve. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;ece866&quot;</span></code> if
-<code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-</dd>
-</dl>
-</section>
-<section id="returns">
-<h4>Returns<a class="headerlink" href="#returns" title="Link to this heading">¶</a></h4>
-<dl class="simple">
-<dt>logging.Logger</dt><dd><p>The named logger instance.</p>
-</dd>
-</dl>
-</section>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="ece866.util.logger.Logger.init">
-<span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stamp_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ece866.util.logger.Logger.init" title="Link to this definition">¶</a></dt>
-<dd><p>Initialize the <code class="docutils literal notranslate"><span class="pre">ece866</span></code> package logger with file and console handlers.</p>
-<p>Sets up log formatting, warning capture via <code class="docutils literal notranslate"><span class="pre">logging.captureWarnings</span></code>,
-and a global exception hook to log uncaught exceptions at <code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code>
-level. If the log file already exists, it is removed before
-initialization.</p>
-<section id="id3">
-<h4>Parameters<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h4>
-<dl class="simple">
-<dt>log_dir<span class="classifier">str, optional</span></dt><dd><p>The directory that the output log file will be written to. If
-<code class="docutils literal notranslate"><span class="pre">None</span></code>, the current working directory is used.</p>
-</dd>
-<dt>log_name<span class="classifier">str, optional</span></dt><dd><p>The name of the output log file. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the log file name is a
-timestamped log file named <code class="docutils literal notranslate"><span class="pre">ece866-YYYY-MM-DD-HH-MM-SS.log</span></code>.</p>
-</dd>
-<dt>log_level<span class="classifier">int, optional</span></dt><dd><p>Logging level for the logger. Should be one of the standard
-<code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code> module constants (e.g. <code class="docutils literal notranslate"><span class="pre">logging.DEBUG</span></code>,
-<code class="docutils literal notranslate"><span class="pre">logging.INFO</span></code>, <code class="docutils literal notranslate"><span class="pre">logging.WARNING</span></code>). Default is <code class="docutils literal notranslate"><span class="pre">logging.INFO</span></code>.</p>
-</dd>
-<dt>stamp_file<span class="classifier">bool, optional</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, append a timestamp of the format
-<code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD-HH-MM-SS</span></code> to the end of the log file name. Default is
-<code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
-</dd>
-</dl>
-</section>
-<section id="id4">
-<h4>Notes<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h4>
-<p><code class="docutils literal notranslate"><span class="pre">KeyboardInterrupt</span></code> is excluded from the exception hook and is handled
-by the default system handler so that <code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code> exits silently.</p>
-<p>Both the <code class="docutils literal notranslate"><span class="pre">ece866</span></code> logger and the <code class="docutils literal notranslate"><span class="pre">py.warnings</span></code> logger (used by
-<code class="docutils literal notranslate"><span class="pre">logging.captureWarnings</span></code>) are attached to the same file and console
-handlers.</p>
-</section>
-</dd></dl>
-
-</section>
-</dd></dl>
-
-</section>
-<section id="module-ece866.util.math_utils">
-<span id="ece866-util-math-utils-module"></span><h2>ece866.util.math_utils module<a class="headerlink" href="#module-ece866.util.math_utils" title="Link to this heading">¶</a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="ece866.util.math_utils.mad">
-<span class="sig-prename descclassname"><span class="pre">ece866.util.math_utils.</span></span><span class="sig-name descname"><span class="pre">mad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ece866.util.math_utils.mad" title="Link to this definition">¶</a></dt>
-<dd><p>Compute the Median Absolute Deviation (MAD) along a given axis.</p>
-<section id="id5">
-<h3>Parameters<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>data<span class="classifier">array-like or da.Array</span></dt><dd><p>Input data.</p>
-</dd>
-<dt>axis<span class="classifier">int, optional</span></dt><dd><p>Axis along which to compute the MAD. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the MAD is computed
-over the entire array.</p>
-</dd>
-</dl>
-</section>
-<section id="id6">
-<h3>Returns<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>numpy.ndarray or dask.array.Array</dt><dd><p>MAD values along the specified axis, matching the type of <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
-</dd>
-</dl>
-</section>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ece866.util.math_utils.mink">
-<span class="sig-prename descclassname"><span class="pre">ece866.util.math_utils.</span></span><span class="sig-name descname"><span class="pre">mink</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ece866.util.math_utils.mink" title="Link to this definition">¶</a></dt>
-<dd><p>Return the <code class="docutils literal notranslate"><span class="pre">k</span></code> smallest values in an array and their indices, in ascending order.</p>
-<section id="id7">
-<h3>Parameters<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>data<span class="classifier">array-like</span></dt><dd><p>1-D input array to search.</p>
-</dd>
-<dt>k<span class="classifier">int</span></dt><dd><p>Number of smallest values to return. If <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code>, empty arrays are
-returned. If <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">&gt;=</span> <span class="pre">len(data)</span></code>, all elements are returned sorted.</p>
-</dd>
-</dl>
-</section>
-<section id="id8">
-<h3>Returns<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>values<span class="classifier">numpy.ndarray</span></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">k</span></code> smallest values in ascending order.</p>
-</dd>
-<dt>indices<span class="classifier">numpy.ndarray of int</span></dt><dd><p>Indices into <code class="docutils literal notranslate"><span class="pre">data</span></code> corresponding to the <code class="docutils literal notranslate"><span class="pre">k</span></code> smallest values.</p>
-</dd>
-</dl>
-</section>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ece866.util.math_utils.nandiv">
-<span class="sig-prename descclassname"><span class="pre">ece866.util.math_utils.</span></span><span class="sig-name descname"><span class="pre">nandiv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suppress_warnings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ece866.util.math_utils.nandiv" title="Link to this definition">¶</a></dt>
-<dd><p>Divide two arrays element-wise, treating NaNs as ones.</p>
-<p>NaN values are replaced with zero before division (via <code class="docutils literal notranslate"><span class="pre">nan_to_num</span></code>).
-The result is set back to NaN only where both <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> were NaN.</p>
-<section id="id9">
-<h3>Parameters<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>a<span class="classifier">array-like</span></dt><dd><p>Numerator array.</p>
-</dd>
-<dt>b<span class="classifier">array-like</span></dt><dd><p>Denominator array.</p>
-</dd>
-<dt>suppress_warnings<span class="classifier">bool, optional</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, suppresses runtime warnings during computation (e.g. divide
-by zero). Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
-</dd>
-</dl>
-</section>
-<section id="id10">
-<h3>Returns<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>dask.array.Array</dt><dd><p>Element-wise quotient of <code class="docutils literal notranslate"><span class="pre">a</span></code> divided by <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
-</dd>
-</dl>
-</section>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ece866.util.math_utils.nanmul">
-<span class="sig-prename descclassname"><span class="pre">ece866.util.math_utils.</span></span><span class="sig-name descname"><span class="pre">nanmul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suppress_warnings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ece866.util.math_utils.nanmul" title="Link to this definition">¶</a></dt>
-<dd><p>Multiply two arrays element-wise, treating NaNs as ones.</p>
-<p>NaN values are replaced with zero before multiplication (via <code class="docutils literal notranslate"><span class="pre">nan_to_num</span></code>).
-The result is set back to NaN only where both <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> were NaN.</p>
-<section id="id11">
-<h3>Parameters<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>a<span class="classifier">array-like</span></dt><dd><p>First input array.</p>
-</dd>
-<dt>b<span class="classifier">array-like</span></dt><dd><p>Second input array.</p>
-</dd>
-<dt>suppress_warnings<span class="classifier">bool, optional</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, suppresses runtime warnings during computation. Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
-</dd>
-</dl>
-</section>
-<section id="id12">
-<h3>Returns<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>dask.array.Array</dt><dd><p>Element-wise product of <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
-</dd>
-</dl>
-</section>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ece866.util.math_utils.nansub">
-<span class="sig-prename descclassname"><span class="pre">ece866.util.math_utils.</span></span><span class="sig-name descname"><span class="pre">nansub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suppress_warnings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ece866.util.math_utils.nansub" title="Link to this definition">¶</a></dt>
-<dd><p>Subtract two arrays element-wise, treating NaNs as zeros.</p>
-<p>NaN values are replaced with zero before subtraction. The result is set back
-to NaN only where both <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> were NaN.</p>
-<section id="id13">
-<h3>Parameters<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>a<span class="classifier">array-like</span></dt><dd><p>First input array (minuend).</p>
-</dd>
-<dt>b<span class="classifier">array-like</span></dt><dd><p>Second input array (subtrahend).</p>
-</dd>
-<dt>suppress_warnings<span class="classifier">bool, optional</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, suppresses runtime warnings during computation. Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
-</dd>
-</dl>
-</section>
-<section id="id14">
-<h3>Returns<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>dask.array.Array</dt><dd><p>Element-wise difference of <code class="docutils literal notranslate"><span class="pre">a</span></code> minus <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
-</dd>
-</dl>
-</section>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ece866.util.math_utils.nansum">
-<span class="sig-prename descclassname"><span class="pre">ece866.util.math_utils.</span></span><span class="sig-name descname"><span class="pre">nansum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suppress_warnings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ece866.util.math_utils.nansum" title="Link to this definition">¶</a></dt>
-<dd><p>Sum two arrays element-wise, treating NaNs as zeros.</p>
-<p>NaN values are replaced with zero before summation. The result is set back
-to NaN only where both <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> were NaN.</p>
-<section id="id15">
-<h3>Parameters<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>a<span class="classifier">array-like</span></dt><dd><p>First input array.</p>
-</dd>
-<dt>b<span class="classifier">array-like</span></dt><dd><p>Second input array.</p>
-</dd>
-<dt>suppress_warnings<span class="classifier">bool, optional</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, suppresses runtime warnings during computation. Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
-</dd>
-</dl>
-</section>
-<section id="id16">
-<h3>Returns<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>dask.array.Array</dt><dd><p>Element-wise sum of <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
-</dd>
-</dl>
-</section>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ece866.util.math_utils.remove_outliers">
-<span class="sig-prename descclassname"><span class="pre">ece866.util.math_utils.</span></span><span class="sig-name descname"><span class="pre">remove_outliers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_inds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ece866.util.math_utils.remove_outliers" title="Link to this definition">¶</a></dt>
-<dd><p>Remove outliers from an array using the Median Absolute Deviation (MAD) method.</p>
-<p>Values more than <code class="docutils literal notranslate"><span class="pre">k</span></code> MADs from the median are replaced with NaN.</p>
-<section id="id17">
-<h3>Parameters<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>data<span class="classifier">array-like or dask.array.Array</span></dt><dd><p>Input data from which to remove outliers.</p>
-</dd>
-<dt>axis<span class="classifier">int, optional</span></dt><dd><p>Axis along which to compute the median and MAD. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, computed
-over the entire array.</p>
-</dd>
-<dt>k<span class="classifier">float, optional</span></dt><dd><p>Number of MADs beyond the median to use as the outlier threshold. Default is <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p>
-</dd>
-<dt>return_inds<span class="classifier">bool, optional</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also returns a boolean mask where <code class="docutils literal notranslate"><span class="pre">True</span></code> indicates an outlier.
-Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-</dd>
-</dl>
-</section>
-<section id="id18">
-<h3>Returns<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>data<span class="classifier">numpy.ndarray or dask.array.Array</span></dt><dd><p>Array with outliers replaced by NaN, matching the type of the input.</p>
-</dd>
-<dt>mask<span class="classifier">numpy.ndarray or dask.array.Array</span></dt><dd><p>Boolean outlier mask. Only returned if <code class="docutils literal notranslate"><span class="pre">return_inds=True</span></code>.</p>
-</dd>
-</dl>
-</section>
-</dd></dl>
-
-</section>
-<section id="module-ece866.util">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ece866.util" title="Link to this heading">¶</a></h2>
+<section id="ece866-util-math-utils-module">
+<h2>ece866.util.math_utils module<a class="headerlink" href="#ece866-util-math-utils-module" title="Link to this heading">¶</a></h2>
 </section>
 </section>
 
@@ -613,7 +291,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">False</s
     <div class="copyright">
         &copy; 2026, Tyler Doiron 
     </div><div class="last-updated">
-      Last updated on Mar 16, 2026</div>
+      Last updated on Apr 29, 2026</div>
   </div>
   <div>
    
@@ -637,31 +315,9 @@ Default is <code class="docutils literal notranslate"><span class="pre">False</s
       <div class="toc-tree">
         <ul>
 <li><a class="reference internal" href="#">ece866.util package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-ece866.util.cli">ece866.util.cli module</a><ul>
-<li><a class="reference internal" href="#ece866.util.cli.doc_entry"><code class="docutils literal notranslate"><span class="pre">doc_entry()</span></code></a></li>
-<li><a class="reference internal" href="#ece866.util.cli.fetch_entry"><code class="docutils literal notranslate"><span class="pre">fetch_entry()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-ece866.util.logger">ece866.util.logger module</a><ul>
-<li><a class="reference internal" href="#ece866.util.logger.Logger"><code class="docutils literal notranslate"><span class="pre">Logger</span></code></a><ul>
-<li><a class="reference internal" href="#ece866.util.logger.Logger.get"><code class="docutils literal notranslate"><span class="pre">Logger.get()</span></code></a></li>
-<li><a class="reference internal" href="#ece866.util.logger.Logger.init"><code class="docutils literal notranslate"><span class="pre">Logger.init()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-ece866.util.math_utils">ece866.util.math_utils module</a><ul>
-<li><a class="reference internal" href="#ece866.util.math_utils.mad"><code class="docutils literal notranslate"><span class="pre">mad()</span></code></a></li>
-<li><a class="reference internal" href="#ece866.util.math_utils.mink"><code class="docutils literal notranslate"><span class="pre">mink()</span></code></a></li>
-<li><a class="reference internal" href="#ece866.util.math_utils.nandiv"><code class="docutils literal notranslate"><span class="pre">nandiv()</span></code></a></li>
-<li><a class="reference internal" href="#ece866.util.math_utils.nanmul"><code class="docutils literal notranslate"><span class="pre">nanmul()</span></code></a></li>
-<li><a class="reference internal" href="#ece866.util.math_utils.nansub"><code class="docutils literal notranslate"><span class="pre">nansub()</span></code></a></li>
-<li><a class="reference internal" href="#ece866.util.math_utils.nansum"><code class="docutils literal notranslate"><span class="pre">nansum()</span></code></a></li>
-<li><a class="reference internal" href="#ece866.util.math_utils.remove_outliers"><code class="docutils literal notranslate"><span class="pre">remove_outliers()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-ece866.util">Module contents</a></li>
+<li><a class="reference internal" href="#ece866-util-cli-module">ece866.util.cli module</a></li>
+<li><a class="reference internal" href="#ece866-util-logger-module">ece866.util.logger module</a></li>
+<li><a class="reference internal" href="#ece866-util-math-utils-module">ece866.util.math_utils module</a></li>
 </ul>
 </li>
 </ul>
@@ -674,7 +330,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">False</s
 
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=12ed36b8"></script>
+</div><script src="_static/documentation_options.js?v=5aa371e9"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>
